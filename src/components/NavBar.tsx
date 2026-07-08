@@ -7,6 +7,32 @@ import { Link as ScrollLink } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import { RiMenu2Fill, RiCloseFill } from "react-icons/ri";
 
+const drawerVariants = {
+  hidden: { x: "-100%", opacity: 0 },
+  visible: {
+    x: "0%",
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 20,
+    },
+  },
+} as const;
+
+const itemVariants = {
+  hidden: { y: 10, opacity: 0 },
+  visible: (index: number) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: (index + 1) * 0.05 + 0.4,
+      duration: 0.3,
+      ease: "easeIn" as const,
+    },
+  }),
+};
+
 const NavBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -16,13 +42,13 @@ const NavBar = () => {
 
   return (
     <div className="sticky top-0 z-50">
-      <div className="font-quicksand bg-blue-primary flex items-center justify-between px-8 py-6 text-sm md:px-16 md:text-base">
+      <div className="font-share bg-blue-primary flex items-center justify-between px-8 py-6 text-sm md:px-16 md:text-base">
         <ScrollLink
           to="home"
           smooth={true}
           duration={500}
           offset={-100}
-          className="text-blue-neon text-glow-blue neon-pulse cursor-pointer"
+          className="font-chakra text-blue-neon text-glow-blue neon-pulse cursor-pointer font-bold tracking-wider"
         >
           Wesley Wu
         </ScrollLink>
@@ -58,14 +84,10 @@ const NavBar = () => {
         {isNavOpen && (
           <motion.div
             className="fixed inset-0 z-50 flex md:hidden"
-            initial={{ x: "-100%", opacity: 0 }}
-            animate={{ x: "0%", opacity: 1 }}
-            exit={{ x: "-100%", opacity: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              damping: 20,
-            }}
+            variants={drawerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
           >
             <div className="bg-blue-primary flex h-full w-[80vw] flex-col gap-6 p-8">
               <div className="flex justify-end">
@@ -78,13 +100,10 @@ const NavBar = () => {
               {navBar.map(({ text, link }, index) => (
                 <motion.div
                   key={index}
-                  initial={{ y: 10, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{
-                    delay: (index + 1) * 0.05 + 0.4,
-                    duration: 0.3,
-                    ease: "easeIn",
-                  }}
+                  custom={index}
+                  variants={itemVariants}
+                  initial="hidden"
+                  animate="visible"
                 >
                   <ScrollLink
                     to={link}
