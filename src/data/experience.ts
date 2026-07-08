@@ -9,6 +9,7 @@ const experiences = [
     logo: suncreer,
     alt: "Suncreer Logo",
     name: "Suncreer Inc.",
+    location: "Tokyo",
     roles: [
       {
         title: "Software Engineer Intern",
@@ -25,6 +26,7 @@ const experiences = [
     logo: handshake,
     alt: "Handshake Logo",
     name: "Handshake",
+    location: "Remote",
     roles: [
       {
         title: "Software Engineer AI Fellow",
@@ -41,6 +43,7 @@ const experiences = [
     logo: citrusHack,
     alt: "Citrus Hack Logo",
     name: "Citrus Hack",
+    location: "Riverside, CA",
     roles: [
       {
         title: "Software Engineer Lead",
@@ -65,7 +68,8 @@ const experiences = [
   {
     logo: ACM,
     alt: "ACM Logo",
-    name: "ACM@UCR",
+    name: "Association of Computing Machinery",
+    location: "Riverside, CA",
     roles: [
       {
         title: "Project Lead",
@@ -109,6 +113,7 @@ const experiences = [
     logo: mahoroba,
     alt: "Mahoroba Japanese Bakery Logo",
     name: "Mahoroba Japanese Bakery",
+    location: "West Sacramento, CA",
     roles: [
       {
         title: "Bakery Assistant",

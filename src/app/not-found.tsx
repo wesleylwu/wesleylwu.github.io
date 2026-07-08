@@ -112,7 +112,7 @@ const Landing = () => {
       ))}
 
       <div className="z-10 flex flex-col items-center space-y-6">
-        <p className="font-share text-amber-gold text-5xl font-bold">
+        <p className="font-share text-lavender-primary text-5xl font-bold">
           Error 404
         </p>
         <Link

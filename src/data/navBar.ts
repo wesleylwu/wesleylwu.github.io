@@ -1,18 +1,18 @@
 const NavBar = [
   {
-    text: "about",
+    text: "About",
     link: "about",
   },
   {
-    text: "experience",
+    text: "Experience",
     link: "experience",
   },
   {
-    text: "projects",
+    text: "Projects",
     link: "projects",
   },
   {
-    text: "contact",
+    text: "Contact",
     link: "contact",
   },
 ];

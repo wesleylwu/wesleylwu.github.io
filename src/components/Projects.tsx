@@ -28,25 +28,16 @@ const Projects = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="font-share text-amber-gold p-8 text-center text-2xl md:mt-10 lg:text-3xl"
+        className="font-share text-lavender-primary p-8 text-center text-lg tracking-wider uppercase md:mt-10 md:text-xl"
         id="projects"
       >
-        Projects
+        PROJECTS
       </motion.p>
 
-      <div className="mx-auto flex max-w-7xl grid-cols-2 flex-col gap-8 md:grid">
+      <div className="mx-auto flex max-w-7xl flex-col gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
         {projects.map(
           (
-            {
-              website,
-              alt,
-              name,
-              description,
-              icons,
-              github,
-              websiteLink,
-              gradient,
-            },
+            { website, alt, name, description, icons, github, websiteLink },
             index,
           ) => {
             const githubIndex = icons.indexOf(SiGithub);
@@ -63,14 +54,9 @@ const Projects = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="flex flex-col items-center"
+                className="flex h-full flex-col items-center"
               >
-                <div className="bg-blue-accent border-gray-primary/20 flex w-2/3 flex-col overflow-hidden rounded-3xl border transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(196,181,253,0.22)] md:w-2/3">
-                  <div
-                    className="h-1 w-full"
-                    style={{ background: gradient }}
-                  />
-
+                <div className="bg-blue-accent border-gray-primary/20 flex h-full w-5/6 max-w-[290px] flex-col overflow-hidden rounded-3xl border transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(196,181,253,0.22)] sm:w-3/4 md:w-full">
                   <Link
                     href={websiteLink}
                     target="_blank"
@@ -83,17 +69,17 @@ const Projects = () => {
                     />
                   </Link>
 
-                  <div className="p-6">
+                  <div className="flex flex-1 flex-col justify-between p-6">
                     <p className="font-chakra mt-2 text-center text-base font-bold text-white lg:text-lg">
                       {name}
                     </p>
-                    <p className="font-noto text-lavender-primary mt-2 text-xs sm:text-sm">
+                    <p className="font-noto mt-2 text-xs text-white sm:text-sm">
                       {description}
                     </p>
                     <div className="font-noto mt-4 flex items-center justify-between text-sm sm:text-base md:text-lg">
                       <div className="flex space-x-4">
                         {leftIcons.map((Icon, index) => (
-                          <Icon key={index} className="text-lavender-primary" />
+                          <Icon key={index} className="text-white" />
                         ))}
                       </div>
                       {githubIndex !== -1 && (
@@ -102,7 +88,7 @@ const Projects = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <SiGithub className="text-lavender-primary transition-colors duration-200 ease-in-out hover:text-white" />
+                          <SiGithub className="text-white/70 transition-colors duration-200 ease-in-out hover:text-white" />
                         </Link>
                       )}
                     </div>

@@ -26,14 +26,14 @@ const Experience = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="font-share text-amber-gold mt-10 flex justify-center text-2xl md:mt-20 md:ml-30 md:justify-start lg:text-3xl"
+        className="font-share text-lavender-primary mt-10 flex justify-center text-lg tracking-wider uppercase md:mt-20 md:text-xl"
         id="experience"
       >
-        Experience
+        EXPERIENCE
       </motion.p>
 
       <div className="mx-auto mt-10 flex w-10/12 flex-col gap-10 pb-16 md:w-8/12">
-        {experiences.map(({ logo, alt, name, roles }, index) => (
+        {experiences.map(({ logo, alt, name, location, roles }, index) => (
           <motion.div
             key={name}
             custom={index}
@@ -51,9 +51,14 @@ const Experience = () => {
                   className="h-12 w-12 shrink-0 rounded-lg object-contain"
                 />
               )}
-              <h3 className="font-noto text-lavender-primary text-base font-bold md:text-lg lg:text-xl">
-                {name}
-              </h3>
+              <div>
+                <h3 className="font-noto text-base font-bold text-white md:text-lg lg:text-xl">
+                  {name}
+                </h3>
+                <p className="font-noto mt-0.5 text-xs text-white/50 md:text-sm">
+                  {location}
+                </p>
+              </div>
             </div>
 
             <div className="space-y-6">
@@ -67,19 +72,17 @@ const Experience = () => {
                       <p className="font-chakra text-sm font-bold text-white sm:text-base md:text-lg lg:text-xl">
                         {title}
                       </p>
-                      <p className="font-noto text-lavender-primary/70 text-xs font-semibold sm:text-sm md:text-base">
+                      <p className="font-noto text-xs font-semibold text-white/70 sm:text-sm md:text-base">
                         {date}
                       </p>
                     </div>
                     <ul className="list-none space-y-2 pl-0">
                       {details.map((detail, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <span className="text-lavender-primary font-noto flex-shrink-0 font-semibold select-none">
+                          <span className="font-noto flex-shrink-0 font-semibold text-white select-none">
                             •
                           </span>
-                          <span className="text-lavender-primary">
-                            {detail}
-                          </span>
+                          <span className="text-white">{detail}</span>
                         </li>
                       ))}
                     </ul>

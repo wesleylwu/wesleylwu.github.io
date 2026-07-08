@@ -133,10 +133,10 @@ const ContactUs = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="font-share text-amber-gold mt-10 p-8 text-center text-2xl lg:text-3xl"
+        className="font-share text-lavender-primary mt-10 p-8 text-center text-lg tracking-wider uppercase md:text-xl"
         id="contact"
       >
-        Contact
+        CONTACT
       </motion.p>
 
       <div className="relative w-full overflow-hidden pb-12">
@@ -180,39 +180,39 @@ const ContactUs = () => {
                 onSubmit={() => (window.submitted = true)}
                 target="hidden_iframe"
               >
-                <div className="font-noto text-lavender-primary block text-sm font-bold md:text-base">
+                <div className="font-noto block text-sm font-bold text-white md:text-base">
                   Name
                 </div>
                 <input
                   name="entry.495580574"
                   type="text"
                   placeholder="Name"
-                  className="font-noto mt-2 w-full rounded-2xl border-1 bg-white p-3 font-medium text-black"
+                  className="font-noto mt-2 w-full rounded-2xl border border-white/10 bg-white/5 p-3 font-medium text-white placeholder-white/30 transition-all duration-200 outline-none focus:border-white/30 focus:bg-white/10"
                   required
                 />
 
-                <div className="font-noto text-lavender-primary mt-4 block text-sm font-bold md:text-base">
+                <div className="font-noto mt-4 block text-sm font-bold text-white md:text-base">
                   Email
                 </div>
                 <input
                   name="entry.1903916603"
                   type="email"
                   placeholder="Email"
-                  className="font-noto mt-2 w-full rounded-2xl border-1 bg-white p-3 font-medium text-black"
+                  className="font-noto mt-2 w-full rounded-2xl border border-white/10 bg-white/5 p-3 font-medium text-white placeholder-white/30 transition-all duration-200 outline-none focus:border-white/30 focus:bg-white/10"
                   required
                 />
 
-                <div className="font-noto text-lavender-primary mt-4 block text-sm font-bold md:text-base">
+                <div className="font-noto mt-4 block text-sm font-bold text-white md:text-base">
                   Message
                 </div>
                 <textarea
                   name="entry.477008615"
-                  className="font-noto mt-2 w-full rounded-2xl border-1 bg-white p-6 font-medium text-black"
+                  className="font-noto mt-2 w-full resize-none rounded-2xl border border-white/10 bg-white/5 p-6 font-medium text-white placeholder-white/30 transition-all duration-200 outline-none focus:border-white/30 focus:bg-white/10"
                   required
                 />
                 <motion.div variants={buttonHoverVariants} whileHover="hover">
                   <div className="mt-4 flex justify-center">
-                    <button className="font-noto bg-blue-secondary w-30 cursor-pointer rounded-2xl border-1 p-2.5 text-center text-sm text-white md:text-base">
+                    <button className="font-noto bg-blue-secondary/60 hover:bg-blue-secondary w-30 cursor-pointer rounded-2xl border border-white/10 p-2.5 text-center text-sm text-white transition-all duration-200 md:text-base">
                       Submit
                     </button>
                   </div>

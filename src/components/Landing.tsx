@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import socials from "@/data/socials";
+import Link from "next/link";
 
 const textVariants = {
   hidden: { opacity: 0 },
@@ -156,15 +158,53 @@ const Landing = () => {
         />
       ))}
 
-      <motion.p
-        variants={textVariants}
-        initial="hidden"
-        animate="visible"
-        className="font-share text-amber-gold z-10 text-2xl font-bold md:-translate-y-30 md:text-3xl lg:text-4xl xl:text-5xl"
-      >
-        {displayedText}
-        <span className="animate-pulse">|</span>
-      </motion.p>
+      <div className="z-10 flex flex-col items-center px-4 text-center md:-translate-y-10">
+        <motion.p
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
+          className="font-share text-lavender-primary text-sm tracking-widest uppercase md:text-base"
+        >
+          {displayedText}
+          <span className="animate-pulse">|</span>
+        </motion.p>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="font-chakra mt-4 text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl"
+        >
+          Wesley Wu
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+          className="font-share text-lavender-primary mt-4 text-base tracking-widest uppercase sm:text-lg md:text-xl"
+        >
+          Software Engineer
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.9, duration: 0.8 }}
+          className="mt-8 flex flex-row justify-center gap-6"
+        >
+          {socials.map(({ Icon, link }, index) => (
+            <Link
+              key={index}
+              href={link}
+              target="_blank"
+              className="hover:text-lavender-primary text-white transition-colors duration-300"
+            >
+              <Icon className="text-xl transition-transform hover:scale-110 md:text-2xl" />
+            </Link>
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 };

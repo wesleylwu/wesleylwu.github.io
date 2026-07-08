@@ -37,14 +37,13 @@ const About = () => {
         viewport={{ once: true }}
         className="flex max-w-xl flex-col items-center md:max-w-2xl md:items-start"
       >
-        <p className="font-share text-amber-gold text-2xl md:ml-5 lg:text-3xl">
-          About
+        <p className="font-share text-lavender-primary text-lg tracking-wider uppercase md:ml-5 md:text-xl">
+          ABOUT
         </p>
-        <p className="bg-blue-accent text-lavender-primary mt-5 w-full rounded-3xl p-6 text-sm md:p-8 md:text-base">
+        <p className="bg-blue-accent mt-5 w-full rounded-3xl p-6 text-sm text-white md:p-8 md:text-base">
           Hi! My name is Wesley Wu. I’m a computer science student at the
-          University of California, Riverside. On my free time, I enjoy
-          listening to music, drawing, and playing volleyball. Thank you for
-          stopping by!
+          University of California, Riverside. On my free time, I enjoy going on
+          runs, bouldering, and playing volleyball. Thank you for stopping by!
         </p>
       </motion.div>
     </div>
