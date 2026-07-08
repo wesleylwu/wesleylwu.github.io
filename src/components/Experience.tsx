@@ -23,7 +23,6 @@ const Experience = () => {
         <div key={name}>
           {index !== 0 && <ExperienceDivder />}
           <div className="mx-auto mt-10 w-10/12 md:w-8/12">
-            {/* Company Header */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
