@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import mtFujiAndMoon from "@/public/mtFujiAndMoon.webp";
+import mtFujiAndMoon from "@/public/landing/mtFujiAndMoon.webp";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 

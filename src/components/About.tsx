@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import pfp from "@/public/profile.webp";
+import pfp from "@/public/landing/profile.webp";
 import { motion } from "framer-motion";
 
 const About = () => {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import mtFujiAndMoon from "@/public/mtFujiAndMoon.webp";
+import mtFujiAndMoon from "@/public/landing/mtFujiAndMoon.webp";
 
 const Landing = () => {
   return (

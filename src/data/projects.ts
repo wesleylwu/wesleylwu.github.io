@@ -1,6 +1,6 @@
-import CSA from "@/public/csa.webp";
-import PTSO from "@/public/ptso.webp";
-import AISC from "@/public/aisc.webp";
+import CSA from "@/public/projects/csa.webp";
+import PTSO from "@/public/projects/ptso.webp";
+import AISC from "@/public/projects/aisc.webp";
 import {
   SiReact,
   SiNextdotjs,

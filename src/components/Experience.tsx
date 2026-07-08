@@ -30,11 +30,13 @@ const Experience = () => {
               transition={{ duration: 1, delay: index * 0.2 }}
               className="flex flex-col items-center justify-center md:w-1/3"
             >
-              <Image
-                src={logo}
-                alt={alt}
-                className={`w-1/3 md:w-3/5 ${index === 1 ? "mr-5 md:mr-10 lg:mr-13" : ""}`}
-              />
+              {logo && (
+                <Image
+                  src={logo}
+                  alt={alt}
+                  className={`w-1/3 md:w-3/5 ${name === "Citrus Hack" ? "mr-5 md:mr-10 lg:mr-13" : ""}`}
+                />
+              )}
               <p className="mt-4 text-center text-sm font-bold md:text-base lg:text-lg">
                 {name}
               </p>
