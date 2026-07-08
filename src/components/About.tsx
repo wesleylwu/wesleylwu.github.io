@@ -27,10 +27,10 @@ const About = () => {
         transition={{ duration: 1, delay: 0.2 }}
         className="flex max-w-xl flex-col items-center md:max-w-2xl md:items-start"
       >
-        <p className="text-blue-neon text-glow-blue text-3xl md:ml-5 md:text-3xl lg:text-4xl xl:text-5xl">
+        <p className="text-blue-neon text-glow-blue text-2xl md:ml-5 lg:text-3xl">
           About
         </p>
-        <p className="bg-blue-accent mt-5 w-full rounded-3xl p-8 text-sm md:mt-10 md:text-base lg:text-lg xl:text-xl">
+        <p className="bg-blue-accent mt-5 w-full rounded-3xl p-6 text-sm md:p-8 md:text-base">
           Hi! My name is Wesley Wu. I’m a computer science student at the
           University of California, Riverside. On my free time, I enjoy
           listening to music, drawing, and playing volleyball. Thank you for

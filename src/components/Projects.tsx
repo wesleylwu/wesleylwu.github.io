@@ -14,7 +14,7 @@ const Projects = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="text-glow-red text-red-neon p-8 text-center text-3xl md:mt-10 md:text-3xl lg:text-4xl xl:text-5xl"
+        className="text-glow-red text-red-neon p-8 text-center text-2xl md:mt-10 lg:text-3xl"
         id="projects"
       >
         Projects
@@ -50,11 +50,11 @@ const Projects = () => {
                 </Link>
 
                 <div className="bg-blue-accent w-2/3 rounded-b-3xl p-4">
-                  <p className="mt-2 text-center text-lg font-bold lg:text-xl xl:text-2xl">
+                  <p className="mt-2 text-center text-base font-bold lg:text-lg">
                     {name}
                   </p>
-                  <p className="mt-2 text-sm md:text-base">{description}</p>
-                  <div className="mt-4 flex items-center justify-between text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+                  <p className="mt-2 text-xs sm:text-sm">{description}</p>
+                  <div className="mt-4 flex items-center justify-between text-sm sm:text-base md:text-lg">
                     <div className="flex space-x-4">
                       {leftIcons.map((Icon, index) => (
                         <Icon key={index} />

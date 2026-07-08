@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="flex flex-row justify-center gap-x-20 p-10">
         {socials.map(({ Icon, link }, index) => (
           <Link key={index} href={link} className="" target="_blank">
-            <Icon className="text-2xl text-white transition duration-300 ease-in-out hover:scale-105 md:text-3xl lg:text-4xl xl:text-5xl" />
+            <Icon className="text-xl text-white transition duration-300 ease-in-out hover:scale-105 md:text-2xl" />
           </Link>
         ))}
       </div>

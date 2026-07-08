@@ -29,7 +29,7 @@ const ContactUs = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="text-glow-green text-green-neon mt-10 p-8 text-center text-3xl md:text-3xl lg:text-4xl xl:text-5xl"
+        className="text-glow-green text-green-neon mt-10 p-8 text-center text-2xl lg:text-3xl"
         id="contact"
       >
         Contact
@@ -44,7 +44,7 @@ const ContactUs = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           {isSubmitted ? (
-            <div className="font-quicksand flex flex-col items-center text-center text-xl sm:text-2xl">
+            <div className="font-quicksand flex flex-col items-center text-center text-lg sm:text-xl">
               Form Submitted!
             </div>
           ) : (
@@ -53,7 +53,7 @@ const ContactUs = () => {
               onSubmit={() => (window.submitted = true)}
               target="hidden_iframe"
             >
-              <div className="font-quicksand block text-lg font-bold md:text-xl xl:text-2xl">
+              <div className="font-quicksand block text-sm font-bold md:text-base">
                 Name
               </div>
               <input
@@ -64,7 +64,7 @@ const ContactUs = () => {
                 required
               />
 
-              <div className="font-quicksand mt-4 block text-lg font-bold md:text-xl xl:text-2xl">
+              <div className="font-quicksand mt-4 block text-sm font-bold md:text-base">
                 Email
               </div>
               <input
@@ -75,7 +75,7 @@ const ContactUs = () => {
                 required
               />
 
-              <div className="font-quicksand mt-4 block text-lg font-bold md:text-xl xl:text-2xl">
+              <div className="font-quicksand mt-4 block text-sm font-bold md:text-base">
                 Message
               </div>
               <textarea
@@ -85,7 +85,7 @@ const ContactUs = () => {
               />
               <motion.div whileHover={{ scale: 1.05 }}>
                 <div className="mt-4 flex justify-center">
-                  <button className="bg-blue-secondary w-30 cursor-pointer rounded-2xl border-1 p-3 text-center text-base md:text-lg xl:text-xl">
+                  <button className="bg-blue-secondary w-30 cursor-pointer rounded-2xl border-1 p-2.5 text-center text-sm md:text-base">
                     Submit
                   </button>
                 </div>

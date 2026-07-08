@@ -30,7 +30,7 @@ const Landing = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="text-2xl md:-translate-y-30 md:text-3xl lg:text-4xl xl:text-5xl"
+        className="text-xl md:-translate-y-30 md:text-2xl lg:text-3xl xl:text-4xl"
       >
         {displayedText}
         <span className="animate-pulse">|</span>

@@ -16,7 +16,7 @@ const NavBar = () => {
 
   return (
     <div className="sticky top-0 z-50">
-      <div className="font-quicksand bg-blue-primary flex items-center justify-between p-10 text-lg lg:text-xl xl:text-2xl">
+      <div className="font-quicksand bg-blue-primary flex items-center justify-between px-8 py-6 text-sm md:px-16 md:text-base">
         <ScrollLink
           to="home"
           smooth={true}
@@ -29,7 +29,7 @@ const NavBar = () => {
 
         <div className="md:hidden">
           <RiMenu2Fill
-            className="cursor-pointer text-3xl text-white"
+            className="cursor-pointer text-2xl text-white"
             onClick={toggleNav}
           />
         </div>
@@ -70,7 +70,7 @@ const NavBar = () => {
             <div className="bg-blue-primary flex h-full w-[80vw] flex-col gap-6 p-8">
               <div className="flex justify-end">
                 <RiCloseFill
-                  className="cursor-pointer text-3xl text-white"
+                  className="cursor-pointer text-2xl text-white"
                   onClick={toggleNav}
                 />
               </div>
@@ -92,7 +92,7 @@ const NavBar = () => {
                     duration={500}
                     offset={-100}
                     onClick={toggleNav}
-                    className="cursor-pointer text-2xl font-medium text-white transition-colors hover:scale-105"
+                    className="cursor-pointer text-lg font-medium text-white transition-colors hover:scale-105"
                     spy={true}
                     activeClass="font-bold"
                   >

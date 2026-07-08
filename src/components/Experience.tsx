@@ -13,7 +13,7 @@ const Experience = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="text-glow-purple text-purple-neon mt-10 flex justify-center text-3xl md:mt-20 md:ml-30 md:justify-start md:text-3xl lg:text-4xl xl:text-5xl"
+        className="text-glow-purple text-purple-neon mt-10 flex justify-center text-2xl md:mt-20 md:ml-30 md:justify-start lg:text-3xl"
         id="experience"
       >
         Experience
@@ -35,7 +35,7 @@ const Experience = () => {
                 alt={alt}
                 className={`w-1/3 md:w-3/5 ${index === 1 ? "mr-5 md:mr-10 lg:mr-13" : ""}`}
               />
-              <p className="mt-4 text-center text-base font-bold md:text-lg lg:text-xl xl:text-2xl">
+              <p className="mt-4 text-center text-sm font-bold md:text-base lg:text-lg">
                 {name}
               </p>
             </motion.div>
@@ -53,13 +53,13 @@ const Experience = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className="bg-blue-accent rounded-3xl p-8 text-sm md:text-base xl:text-lg"
+                  className="bg-blue-accent rounded-3xl p-6 text-sm md:p-8 md:text-base"
                 >
                   <div className="mb-4 flex items-center justify-between">
-                    <p className="text-base font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+                    <p className="text-sm font-bold sm:text-base md:text-lg lg:text-xl">
                       {title}
                     </p>
-                    <p className="text-gray-primary text-sm font-semibold md:text-base lg:text-lg xl:text-xl">
+                    <p className="text-gray-primary text-xs font-semibold sm:text-sm md:text-base">
                       {date}
                     </p>
                   </div>
