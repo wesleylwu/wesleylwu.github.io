@@ -2,6 +2,7 @@ import ACM from "@/public/experiences/acm.webp";
 import citrusHack from "@/public/experiences/citrusHack.webp";
 import suncreer from "@/public/experiences/suncreer.webp";
 import handshake from "@/public/experiences/handshake.webp";
+import mahoroba from "@/public/experiences/mahoroba.webp";
 
 const experiences = [
   {
@@ -105,7 +106,7 @@ const experiences = [
     ],
   },
   {
-    logo: null,
+    logo: mahoroba,
     alt: "Mahoroba Japanese Bakery Logo",
     name: "Mahoroba Japanese Bakery",
     roles: [
