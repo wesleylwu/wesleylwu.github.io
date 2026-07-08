@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="bg-blue-primary">
+    <div className="bg-transparent">
       <Divider />
       <div className="flex flex-row justify-center gap-x-20 p-10">
         {socials.map(({ Icon, link }, index) => (

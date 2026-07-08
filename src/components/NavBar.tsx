@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import navBar from "@/data/navBar";
 import Divider from "@/components/Divider";
 import { Link as ScrollLink } from "react-scroll";
@@ -35,6 +35,13 @@ const itemVariants = {
 
 const NavBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const toggleNav = () => {
     setIsNavOpen((prev) => !prev);
@@ -42,13 +49,17 @@ const NavBar = () => {
 
   return (
     <div className="sticky top-0 z-50">
-      <div className="font-share bg-blue-primary flex items-center justify-between px-8 py-6 text-sm md:px-16 md:text-base">
+      <div
+        className={`font-share flex items-center justify-between px-8 py-6 text-sm transition-all duration-300 md:px-16 md:text-base ${
+          scrolled ? "bg-blue-primary/90 backdrop-blur-md" : "bg-transparent"
+        }`}
+      >
         <ScrollLink
           to="home"
           smooth={true}
           duration={500}
           offset={-100}
-          className="font-chakra text-blue-neon text-glow-blue neon-pulse cursor-pointer font-bold tracking-wider"
+          className="font-chakra text-lavender-primary cursor-pointer font-bold tracking-wider transition-colors hover:text-white"
         >
           Wesley Wu
         </ScrollLink>
@@ -60,7 +71,7 @@ const NavBar = () => {
           />
         </div>
 
-        <div className="hidden flex-row-reverse gap-15 text-white md:flex">
+        <div className="text-lavender-primary hidden flex-row-reverse gap-15 md:flex">
           {[...navBar].reverse().map(({ text, link }, index) => (
             <ScrollLink
               to={link}
@@ -70,7 +81,7 @@ const NavBar = () => {
               className="cursor-pointer font-medium transition-transform duration-300 ease-in-out hover:scale-105"
               spy={true}
               offset={-130}
-              activeClass="text-blue-dark"
+              activeClass="underline decoration-lavender-primary decoration-2 underline-offset-8"
             >
               {text}
             </ScrollLink>
@@ -78,7 +89,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      <Divider />
+      {scrolled && <Divider />}
 
       <AnimatePresence>
         {isNavOpen && (
@@ -111,9 +122,9 @@ const NavBar = () => {
                     duration={500}
                     offset={-100}
                     onClick={toggleNav}
-                    className="cursor-pointer text-lg font-medium text-white transition-colors hover:scale-105"
+                    className="text-lavender-primary cursor-pointer text-lg font-medium transition-colors hover:scale-105"
                     spy={true}
-                    activeClass="font-bold"
+                    activeClass="underline decoration-lavender-primary decoration-2 underline-offset-8 font-bold"
                   >
                     {text}
                   </ScrollLink>
