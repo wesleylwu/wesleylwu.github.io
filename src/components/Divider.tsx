@@ -1,5 +1,5 @@
 const Divider = () => {
-  return <div className="rounded-xl border-t-3 border-white" />;
+  return <div className="rounded-xl border-t border-white/10" />;
 };
 
 export default Divider;

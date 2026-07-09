@@ -6,7 +6,7 @@ import Contact from "@/components/Contact";
 
 const Home = () => {
   return (
-    <div className="bg-blue-primary text-white">
+    <div className="bg-transparent text-white">
       <Landing />
       <About />
       <Experience />
