@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import experiences from "@/data/experience";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const fadeInVariants = {
   hidden: { opacity: 0 },

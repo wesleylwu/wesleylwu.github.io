@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "~5.53.3",
+    "framer-motion": "^12.23.6",
     "lucide-react": "~0.417.0",
     "next": "^16.2.10",
     "react": "19.0.0",

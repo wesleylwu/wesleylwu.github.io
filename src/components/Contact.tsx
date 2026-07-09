@@ -8,7 +8,7 @@ declare global {
 
 import React, { useState, useEffect } from "react";
 import toast from "react-hot-toast";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const fadeInVariants = {
   hidden: { opacity: 0 },

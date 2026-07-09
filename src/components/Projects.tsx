@@ -4,7 +4,7 @@ import projects from "@/data/projects";
 import Image from "next/image";
 import Link from "next/link";
 import { SiGithub } from "react-icons/si";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const fadeInVariants = {
   hidden: { opacity: 0 },
