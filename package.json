@@ -9,7 +9,7 @@
     "check": "npx prettier --check .",
     "eslint": "npx eslint -c eslint.config.mjs",
     "prepare": "husky install",
-    "lint": "next lint",
+    "lint": "npm run eslint",
     "format:check": "prettier --check .",
     "format": "prettier --write ."
   },
