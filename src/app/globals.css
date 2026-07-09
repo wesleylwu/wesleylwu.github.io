@@ -1,93 +1,81 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-blue-primary: #030f18;
-  --color-blue-secondary: #061928;
-  --color-blue-accent: #060316;
-  --color-blue-dark: #008c8c;
-  --color-gray-primary: #4f575d;
-  --color-blue-neon: #00ffff;
-  --color-purple-neon: #d300ff;
-  --color-red-neon: #ff073a;
-  --color-green-neon: #39ff14;
-  --font-quicksand: "Quicksand";
+  --color-blue-primary: #080818;
+  --color-blue-secondary: #0b0b21;
+  --color-blue-accent: #09091c;
+  --color-blue-dark: #c4b5fd;
+  --color-gray-primary: #94a3b8;
+  --color-lavender-primary: #c4b5fd;
+  --color-amber-gold: #f4a83a;
+
+  --font-chakra: var(--font-chakra);
+  --font-noto: var(--font-noto);
+  --font-share: var(--font-share);
 }
 
-.text-glow-blue {
-  text-shadow:
-    0 0 5px #00ffff,
-    0 0 10px #00ffff,
-    0 0 20px #00ffff,
-    0 0 40px #00ffff;
-}
-
-.text-glow-purple {
-  text-shadow:
-    0 0 5px #d300ff,
-    0 0 10px #d300ff,
-    0 0 20px #d300ff,
-    0 0 40px #d300ff;
-}
-
-.text-glow-red {
-  text-shadow:
-    0 0 5px #ff073a,
-    0 0 10px #ff073a,
-    0 0 20px #ff073a,
-    0 0 40px #ff073a;
-}
-
-.text-glow-green {
-  text-shadow:
-    0 0 5px #32cd32,
-    0 0 10px #32cd32,
-    0 0 20px #32cd32,
-    0 0 40px #32cd32;
-}
-
-@keyframes neonPulse {
-  0% {
-    text-shadow:
-      0 0 10px currentColor,
-      0 0 20px currentColor,
-      0 0 40px currentColor,
-      0 0 60px currentColor;
+@keyframes starTwinkle {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
   }
   50% {
-    text-shadow:
-      0 0 20px currentColor,
-      0 0 40px currentColor,
-      0 0 60px currentColor,
-      0 0 80px currentColor;
+    opacity: 0.15;
+    transform: scale(0.6);
+  }
+}
+
+@keyframes fireflyDrift {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(var(--dx), var(--dy)) scale(1.2);
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 1;
   }
   100% {
-    text-shadow:
-      0 0 10px currentColor,
-      0 0 20px currentColor,
-      0 0 40px currentColor,
-      0 0 60px currentColor;
+    transform: translate(calc(var(--dx) * 2), calc(var(--dy) * 0.5)) scale(0.8);
+    opacity: 0;
   }
 }
 
-.neon-pulse {
-  animation: neonPulse 2.5s infinite ease-in-out;
+@keyframes moonGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 40px 16px rgba(244, 224, 120, 0.18),
+      0 0 80px 32px rgba(244, 200, 80, 0.09);
+  }
+  50% {
+    box-shadow:
+      0 0 55px 22px rgba(244, 224, 120, 0.24),
+      0 0 100px 44px rgba(244, 200, 80, 0.13);
+  }
 }
 
-.image-glow-blue {
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.firefly {
+  position: absolute;
   border-radius: 50%;
-  box-shadow:
-    0 0 5px #00ffff,
-    0 0 10px #00ffff,
-    0 0 20px #00ffff,
-    0 0 40px #00ffff;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.image-glow-blue:hover {
-  box-shadow:
-    0 0 10px #00ffff,
-    0 0 20px #00ffff,
-    0 0 30px #00ffff,
-    0 0 50px #00ffff;
+  background: radial-gradient(circle, #f4e070, #f4a83a 60%, transparent);
+  animation: fireflyDrift var(--dur) var(--delay) ease-in-out infinite;
+  pointer-events: none;
+  filter: blur(0.5px);
 }

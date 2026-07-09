@@ -1,12 +1,7 @@
-import { RiInstagramFill } from "react-icons/ri";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const socials = [
-  {
-    Icon: RiInstagramFill,
-    link: "https://www.instagram.com/wesleylwu/",
-  },
   {
     Icon: FaLinkedin,
     link: "https://www.linkedin.com/in/wesleylwu/",
@@ -18,6 +13,10 @@ const socials = [
   {
     Icon: MdEmail,
     link: "mailto:wesleylwu@gmail.com",
+  },
+  {
+    Icon: FaFileAlt,
+    link: "/WesleyWuResume.pdf",
   },
 ];
 
