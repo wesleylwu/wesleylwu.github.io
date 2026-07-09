@@ -115,7 +115,7 @@ const ContactUs = () => {
   }, []);
 
   return (
-    <>
+    <div id="contact" className="pt-10 md:pt-20">
       <iframe
         name="hidden_iframe"
         id="hidden_iframe"
@@ -133,8 +133,7 @@ const ContactUs = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="font-share text-lavender-primary mt-10 p-8 text-center text-lg tracking-wider uppercase md:text-xl"
-        id="contact"
+        className="font-share text-lavender-primary p-8 text-center text-lg tracking-wider uppercase md:text-xl"
       >
         CONTACT
       </motion.p>
@@ -222,7 +221,7 @@ const ContactUs = () => {
           </motion.div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

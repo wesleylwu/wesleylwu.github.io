@@ -78,9 +78,9 @@ const NavBar = () => {
               key={index}
               smooth={true}
               duration={500}
-              className="cursor-pointer font-medium transition-transform duration-300 ease-in-out hover:scale-105"
+              className="cursor-pointer font-medium transition-colors duration-300 ease-in-out hover:text-white"
               spy={true}
-              offset={-130}
+              offset={-80}
               activeClass="underline decoration-lavender-primary decoration-2 underline-offset-8"
             >
               {text}
@@ -120,9 +120,9 @@ const NavBar = () => {
                     to={link}
                     smooth={true}
                     duration={500}
-                    offset={-100}
+                    offset={-80}
                     onClick={toggleNav}
-                    className="text-lavender-primary cursor-pointer text-lg font-medium transition-colors hover:scale-105"
+                    className="text-lavender-primary cursor-pointer text-lg font-medium transition-colors hover:text-white"
                     spy={true}
                     activeClass="underline decoration-lavender-primary decoration-2 underline-offset-8 font-bold"
                   >

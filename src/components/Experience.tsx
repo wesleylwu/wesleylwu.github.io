@@ -20,14 +20,13 @@ const companyBoxVariants = {
 
 const Experience = () => {
   return (
-    <>
+    <div id="experience" className="pt-10 md:pt-20">
       <motion.p
         variants={fadeInVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="font-share text-lavender-primary mt-10 flex justify-center text-lg tracking-wider uppercase md:mt-20 md:text-xl"
-        id="experience"
+        className="font-share text-lavender-primary flex justify-center text-lg tracking-wider uppercase md:text-xl"
       >
         EXPERIENCE
       </motion.p>
@@ -93,7 +92,7 @@ const Experience = () => {
           </motion.div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

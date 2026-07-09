@@ -22,14 +22,13 @@ const projectCardVariants = {
 
 const Projects = () => {
   return (
-    <>
+    <div id="projects" className="pt-10 md:pt-20">
       <motion.p
         variants={fadeInVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="font-share text-lavender-primary p-8 text-center text-lg tracking-wider uppercase md:mt-10 md:text-xl"
-        id="projects"
+        className="font-share text-lavender-primary p-8 text-center text-lg tracking-wider uppercase md:text-xl"
       >
         PROJECTS
       </motion.p>
@@ -99,7 +98,7 @@ const Projects = () => {
           },
         )}
       </div>
-    </>
+    </div>
   );
 };
 
